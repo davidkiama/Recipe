@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Searched() {
   const [searchedRecipes, setSearchedRecipes] = useState([]);
@@ -24,12 +25,19 @@ function Searched() {
     <div className="cont--grid">
       {searchedRecipes.map((recipe) => {
         return (
-          <div className="cont--item " key={recipe.id}>
+          <motion.div
+            className="cont--item "
+            key={recipe.id}
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <Link to={`/recipe/${recipe.id}`}>
               <img src={recipe.image} alt={recipe.title} />
               <h4>{recipe.title}</h4>
             </Link>
-          </div>
+          </motion.div>
         );
       })}
     </div>

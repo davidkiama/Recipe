@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 import { Link, useParams } from "react-router-dom";
 
@@ -23,12 +24,19 @@ function Cuisine() {
     <div className="cont--grid">
       {cuisine.map((recipe) => {
         return (
-          <div className="cont--item " key={recipe.id}>
+          <motion.div
+            className="cont--item "
+            key={recipe.id}
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <Link to={`/recipe/${recipe.id}`}>
               <img src={recipe.image} alt={recipe.title} />
               <h4>{recipe.title}</h4>
             </Link>
-          </div>
+          </motion.div>
         );
       })}
     </div>
