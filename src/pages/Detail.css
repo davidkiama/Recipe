@@ -1,0 +1,35 @@
+.cont--detail {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  display: flex;
+}
+
+.cont--detail h2 {
+  margin-bottom: 2rem;
+}
+
+.cont--detail li {
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+}
+
+.cont--detail ul {
+  margin-top: 2rem;
+}
+
+.cont--detail button {
+  padding: 1rem 2rem;
+  color: #313131;
+  background-color: white;
+  border: 2px solid black;
+  margin-right: 2rem;
+  font-weight: 600;
+}
+.cont--detail .info {
+  margin-left: 10rem;
+}
+
+.cont--detail button.active {
+  background: linear-gradient(35deg, #494949, #2c2c2c);
+  color: white;
+}

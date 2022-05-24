@@ -24,8 +24,10 @@ function Cuisine() {
       {cuisine.map((recipe) => {
         return (
           <div className="cont--item " key={recipe.id}>
-            <img src={recipe.image} alt={recipe.title} />
-            <h4>{recipe.title}</h4>
+            <Link to={`/recipe/${recipe.id}`}>
+              <img src={recipe.image} alt={recipe.title} />
+              <h4>{recipe.title}</h4>
+            </Link>
           </div>
         );
       })}
