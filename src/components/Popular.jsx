@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
+import "./components.css";
+
 function Popular() {
   const [popular, setPopular] = useState([]);
 
@@ -29,7 +31,7 @@ function Popular() {
   return (
     <div>
       Popular
-      <Wrapper>
+      <div className="wrapper">
         <h3>Popular picks</h3>
         <Splide
           options={{
@@ -43,50 +45,21 @@ function Popular() {
           {popular.map((recipe) => {
             return (
               <SplideSlide key={recipe.id}>
-                <Card>
+                <div className="card">
                   <p>{recipe.title} </p>
-                  <img src={recipe.image} alt="Image Title" />
+                  <img src={recipe.image} alt={recipe.title} />
                   <Gradient />
-                </Card>
+                </div>
               </SplideSlide>
             );
           })}
         </Splide>
-      </Wrapper>
+      </div>
     </div>
   );
 }
 
-const Wrapper = styled.div`
-  margin: 4rem 0;
-`;
-
-const Card = styled.div`
-  min-height: 23rem;
-  border-radius: 2rem;
-  overflow: hidden;
-  position: relative;
-
-  img {
-    border-radius: 2rem;
-    position: absolute;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-  }
-
-  p {
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    z-index: 10;
-    font-size: 1.6rem;
-  }
-`;
+const Card = styled.div``;
 
 const Gradient = styled.div`
   position: absolute;
