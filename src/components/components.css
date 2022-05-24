@@ -1,3 +1,29 @@
+.form {
+  width: fit-content;
+  margin: auto;
+
+  position: relative;
+}
+
+.form input {
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  color: white;
+  background: linear-gradient(35deg, #494949, #2c2c2c);
+}
+
+.form svg {
+  fill: white;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  font-size: 1rem;
+  transform: translate(100%, -50%);
+}
+
 .nav-list {
   display: flex;
   align-items: center;
