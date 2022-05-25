@@ -99,9 +99,9 @@
 .cont--grid {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 5rem;
+  gap: 2rem;
 }
 
 .cont--grid a {
@@ -109,11 +109,12 @@
 }
 
 .cont--item {
-  width: 25rem;
+  width: 20rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .cont--item img {
